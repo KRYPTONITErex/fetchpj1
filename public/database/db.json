@@ -1,0 +1,16 @@
+{
+    "jobs":[
+        {"title":"Project Manager","id":1,"detail":"creative coder PM"},
+        {"title":"Web Designer","id":2,"detail":"creative coder WD"},
+        {"title":"Software Developer","id":3,"detail":"creative coder SD"},
+        
+        {"title":"AFS Manager","id":4,"detail":"workshop Manager"},
+        {"title":"Service Supervisor","id":5,"detail":"workshop supervisor"},
+        {"title":"Technician","id":6,"detail":"car technician"},
+
+        {"title":"Sales Manager","id":7,"detail":"electrical product company"},
+        {"title":"Admin","id":8,"detail":"Admin jobs"},
+        {"title":"Consultant","id":9,"detail":"product seller"}
+    ]
+    
+}
