@@ -10,22 +10,22 @@
 
 <script>
 
-  fetch("/database/db.json")
+  // fetch("/database/db.json")
 
-  .then((response)=>{
-    // console.log("resolved", response.json);
+  // .then((response)=>{
+  //   // console.log("resolved", response.json);
     
-    if (response.status===404){
-      throw new Error("ur link no good")
-    }
-    return response.json();
-  })
-  .then((data)=>{
-    console.log(data);
-  })
-  .catch((err)=>{
-    console.log(err.message);
-  })
+  //   if (response.status===404){
+  //     throw new Error("ur link no good")
+  //   }
+  //   return response.json();
+  // })
+  // .then((data)=>{
+  //   console.log(data);
+  // })
+  // .catch((err)=>{
+  //   console.log(err.message);
+  // })
 
   // fetch("/database/db.json")
 
@@ -52,18 +52,55 @@
   //   console.log(datas);
   // })
 
-  let getmyJson = async()=>{
-    let response = await fetch("/database/db.json")
+  // let getmyJson = async()=>{
+  //   let response = await fetch("/database/db.json")
+
+  //   let datas = await response.json();
+  //   return datas;
+
+  // }
+  // getmyJson()
+  // .then((datas)=>{
+  //   console.log(datas);
+  // })
+
+
+  let GetMyJson = async()=>{
+    let response = await fetch("/database/db.json");
+
+    if(response.status===404){
+      throw new Error ("Not Found URL")
+    }
 
     let datas = await response.json();
-    return datas;
-
+    return datas
   }
-  getmyJson()
+  GetMyJson()
   .then((datas)=>{
     console.log(datas);
   })
+  .catch((err)=>{
+    console.log(err.message)
+  })
 
+
+  let GETmyJson = async()=>{
+    let Response = await fetch ("/database/db.json");
+
+    if (Response.status===404){
+      throw new Error("URL IS USELESS MAN")
+    }
+
+    let datas = await Response.json();
+    return datas
+  }
+  GETmyJson()
+  .then((datas)=>{
+    console.log(datas);
+  })
+  .catch((err)=>{
+    console.log(err.message)
+  })
 
 
   export default {
